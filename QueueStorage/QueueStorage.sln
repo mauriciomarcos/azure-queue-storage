@@ -5,7 +5,9 @@ VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueStoragePublisher", "QueueStoragePublisher\QueueStoragePublisher.csproj", "{0EBEDC0F-B77B-4872-93E4-186A6E6BBCA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueStorageSubscriber", "QueueStorageSubscriber\QueueStorageSubscriber.csproj", "{E2D0EFE8-1002-4E7D-A376-97276FE24CC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueStorageSubscriber", "QueueStorageSubscriber\QueueStorageSubscriber.csproj", "{E2D0EFE8-1002-4E7D-A376-97276FE24CC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueStorageSubscriberListener", "QueueStorageSubscriberListener\QueueStorageSubscriberListener.csproj", "{CBA4BE27-1445-497A-8DA6-C9C4CEC2422A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E2D0EFE8-1002-4E7D-A376-97276FE24CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D0EFE8-1002-4E7D-A376-97276FE24CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D0EFE8-1002-4E7D-A376-97276FE24CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA4BE27-1445-497A-8DA6-C9C4CEC2422A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA4BE27-1445-497A-8DA6-C9C4CEC2422A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA4BE27-1445-497A-8DA6-C9C4CEC2422A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA4BE27-1445-497A-8DA6-C9C4CEC2422A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

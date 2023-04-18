@@ -13,12 +13,13 @@ using IServiceScope serviceScope = host.Services.CreateScope();
 IServiceProvider provider = serviceScope.ServiceProvider;
 var queueSubscriberManager = provider.GetRequiredService<IQueueSubscriberManager>();
 
+var cancelationToken = new CancellationToken();
 var queueName = "user-timeout-queue";
 var repeat = true;
 
 while (repeat)
 {
-    await queueSubscriberManager.DequeueMessagesAsync(queueName);
+    await queueSubscriberManager.DequeueMessagesAsync(queueName, cancelationToken);
 }
 
 Console.WriteLine("Fim da Aplicação Subscriber...");

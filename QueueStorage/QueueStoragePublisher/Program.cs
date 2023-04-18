@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using QueueStorage.Classes;
 using QueueStorage.Intefaces;
+using QueueStorageSubscriber.Interfaces;
+using QueueStorageSubscriberListener.Classes;
+using System.Timers;
 
 Console.WriteLine("Iniciando Aplicação Publisher...");
 
@@ -31,5 +34,16 @@ IHostBuilder CreateDefaultBuilder()
         .ConfigureServices(services =>
         {
             services.AddSingleton<IQueuePublisherManager, QueuePublisherManager>();
+            services.AddHostedService(provider =>
+            {
+                var timeInHours = (1000 * 60 * 60);
+                var timer = new System.Timers.Timer
+                {
+                    Interval = timeInHours,
+                    AutoReset = true,
+                    Enabled = true,
+                };
+                return new StorageSubscriberListenerBackgroundService(provider.GetService<IQueueSubscriberManager>()!, timer);
+            });
         });
 }

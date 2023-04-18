@@ -1,6 +1,6 @@
 ﻿namespace QueueStorageSubscriber.Interfaces;
 
-internal interface IQueueSubscriberManager
+public interface IQueueSubscriberManager
 {
-    Task DequeueMessagesAsync(string queueName);
+    Task DequeueMessagesAsync(string queueName, CancellationToken cancellationToken);
 }

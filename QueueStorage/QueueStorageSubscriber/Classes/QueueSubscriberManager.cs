@@ -19,7 +19,7 @@ internal class QueueSubscriberManager : IQueueSubscriberManager
         _logger = logger;
     }
 
-    public async Task DequeueMessagesAsync(string queueName)
+    public async Task DequeueMessagesAsync(string queueName, CancellationToken cancellationToken)
     {
         try
         {
