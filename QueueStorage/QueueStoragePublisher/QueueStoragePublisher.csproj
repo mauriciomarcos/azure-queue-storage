@@ -15,7 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QueueStorageSubscriberListener\QueueStorageSubscriberListener.csproj" />
     <ProjectReference Include="..\QueueStorageSubscriber\QueueStorageSubscriber.csproj" />
   </ItemGroup>
 
